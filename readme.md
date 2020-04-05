@@ -1,0 +1,1 @@
+esse projeto foi feito para que seja um interpretador de codigo com a capacidade de identificar difetentes tipos de codificação e decodificalas mesmo que estaja codificado varias vezes.
