@@ -123,59 +123,67 @@ main()
         strcpy(menu,"s");
         lecod = 0;
         decod = 0;
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //opcao 1
         if ((opcao == 1) && (strcmp(menu,"s")==0))
         {
             while (lecod!=7)
             {
                 system("cls");
-
                 printf("selecione a linguagem desejada para codificar:\n\n");
                 printf("0-contador de caractes(limite de 500 ca sem esapaços) \n1-Binario\n2-Hexa-Decimal\n3-Cesar\n4-Ascii\n5-Morse \n6-Base64\n7-Voltar Menu\n8-encerrar programa\nInsira:");
                 scanf("%d",&lecod);
-                if (lecod==1)
+                switch(lecod)
                 {
-                   /* fputs("Inisira um caractere\n", stdout);
-                    scanf("%c%*c", &c);
-                    codBi(c, bits);
-                    fprintf(stdout, "No sistema binario %s\n", bits);*/
-                    getch();
-                }else if(lecod==2){
-                    system("cls");
-                    printf("Insira:");
-                    getch();
-                }else if (lecod==3){
-                    system("cls");
-                    printf("Insira:");
-                    getch();
-                }else if (lecod==4){
-                    fflush(stdin);
-                    system("cls");
-                    printf("Insira:\n");
-                    scanf("%[^\n]s",ascii);
-                    setbuf(stdin, NULL);
-                    codAsc();
-                    getch();
-
-                }else if(lecod==5){
-                    system("cls");
-                    printf("Insira:");
-                    getch();
-                }else if(lecod==6){
-                    system("cls");
-                    printf("Insira:");
-                    getch();
-                }else if(lecod==7){
-                opcao=0;
-                }else if(lecod==8){
-                    opcao=0;
-                    strcpy(menu,"n");
-                    lecod = 7;
-                }else if(lecod==0){
-                    system("cls");
-                    printf("Insira:");
-                    getch();
+                    case 1:
+                    /* fputs("Inisira um caractere\n", stdout);
+                        scanf("%c%*c", &c);
+                        codBi(c, bits);
+                        fprintf(stdout, "No sistema binario %s\n", bits);*/
+                        getch();
+                        break;
+                    case 2:
+                        system("cls");
+                        printf("Insira:");
+                        getch();
+                        break;
+                    case 3:
+                        system("cls");
+                        printf("Insira:");
+                        getch();
+                        break;
+                    case 4:
+                        fflush(stdin);
+                        system("cls");
+                        printf("Insira:\n");
+                        scanf("%[^\n]s",ascii);
+                        setbuf(stdin, NULL);
+                        codAsc();
+                        getch();
+                        break;
+                    case 5:
+                        system("cls");
+                        printf("Insira:");
+                        getch();
+                        break;
+                    case 6:
+                        system("cls");
+                        printf("Insira:");
+                        getch();
+                        break;
+                    case 7:
+                        opcao=0;
+                        break;
+                    case 8:
+                        opcao=0;
+                        strcpy(menu,"n");
+                        lecod = 7;
+                        break;
+                    case 0:
+                        system("cls");
+                        printf("Insira:");
+                        getch();
+                        break;
                 }
                 if((lecod<=7) && (opcao==1)){
                     printf("\n1-codificar novamente\n2-voltar ao menu?\nInsira:");
@@ -185,11 +193,12 @@ main()
                         lecod = 7;
                     }    
                 }
+                //////////////////
             }
         }
     
 
-        if ((opcao == 2) && (strcmp(menu,"s")==0))
+        else if ((opcao == 2) && (strcmp(menu,"s")==0))
         {
             while (decod!=7)
             {
@@ -198,41 +207,51 @@ main()
                 printf("selecione a linguagem desejada para decodificar:\n\n");
                 printf("1-Binario\n2-Hexa-Decimal\n3-Cesar\n4-Ascii\n5-Morse\n6-Base64\n7-Voltar Menu\n8-encerrar programa\nInsira:");
                 scanf("%d",&decod);
-                if (lecod==1)
+                ////////////////////////
+                switch (decod)
                 {
-                    system("cls");
-                    printf("Insira:");
-                    getch();
-                }else if(decod==2){
-                    system("cls");
-                    printf("Insira:");
-                    getch();
-                }else if (decod==3){
-                    system("cls");
-                    printf("Insira:");
-                    getch();
-                }else if (decod==4){
-                    fflush(stdin);
-                    system("cls");
-                    printf("Insira:\n");
-                    scanf("%[^\n]s", ascii);
-                    setbuf(stdin, NULL);
-                    decAsc();
-                    getch();
-                }else if(decod==5){
-                    system("cls");
-                    printf("Insira:");
-                    getch();
-                }else if(decod==6){
-                    system("cls");
-                    printf("Insira:");
-                    getch();
-                }else if(decod==7){
-                opcao=0;
-                }else if(decod==8){
-                    opcao=0;
-                    strcpy(menu,"n");
-                    decod=7;
+                    case 1:
+                        system("cls");
+                        printf("Insira:");
+                        getch();
+                        break;
+                    case 2:
+                        system("cls");
+                        printf("Insira:");
+                        getch();
+                        break;
+                    case 3:
+                        system("cls");
+                        printf("Insira:");
+                        getch();
+                        break;
+                    case 4:
+                        fflush(stdin);
+                        system("cls");
+                        printf("Insira:\n");
+                        scanf("%[^\n]s", ascii);
+                        setbuf(stdin, NULL);
+                        decAsc();
+                        getch();
+                        break;
+                    case 5:
+                        system("cls");
+                        printf("Insira:");
+                        getch();
+                        break;
+                    case 6:
+                        system("cls");
+                        printf("Insira:");
+                        getch();
+                        break;
+                    case 7:
+                        opcao=0;
+                        break;
+                    case 8:
+                        opcao=0;
+                        strcpy(menu,"n");
+                        decod=7;
+                        break;
                 }
                 if((decod<=7)&&(opcao==2)){
                     printf("\n1-decodificar novamente\n2-voltar ao menu?\nInsira:");
@@ -242,6 +261,7 @@ main()
                         decod = 7;
                     }    
                 }
+                //////////////////////////
             }
         }
     }
