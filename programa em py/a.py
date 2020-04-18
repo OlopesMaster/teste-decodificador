@@ -6,7 +6,7 @@ menu = controle = ''
 while True:
     print('Programa De Codificaçao/Decodificaçao')
     print('selecione alguma das opçoes abaixo:')
-    opcao = int(input('1-Codificar\n2-Decodificar\nInsira:'))
+    opcao = int(input('1-Codificar\n2-Decodificar\n3-Encerra Programa\nInsira:'))
     if opcao == 1:
         while lecod != 7:
             print('selecione a linguagem desejada para codificar:\n\n')
@@ -91,4 +91,6 @@ while True:
             if opcao == 2:
                 opcao = 0
                 lecod = 7
+    if opcao == 3:
+        break
 print('\nobrigado por utilizar meu programa\nass. L Olopes')
