@@ -1,7 +1,7 @@
 import sys
 
 opcao = lecod = decod = execucao = cont = 0
-menu = controle = ''
+menu = controle = codificado =''
 
 while True:
     print('Programa De Codificaçao/Decodificaçao')
@@ -10,8 +10,7 @@ while True:
     if opcao == 1:
         while lecod != 7:
             print('selecione a linguagem desejada para codificar:\n\n')
-            lecod = int(input(
-                '0-contador de caractes(limite de 500 ca sem esapaços) \n1-Binario\n2-Hexa-Decimal\n3-Cesar\n4-Ascii\n5-Morse \n6-Base64\n7-Voltar Menu\n8-encerrar programa\nInsira:'))
+            lecod = int(input('0-contador de caractes(limite de 500 ca sem esapaços) \n1-Binario\n 2-Hexa-Decimal\n 3-Cesar\n 4-Ascii\n 5-Morse \n 6-Base64\n 7-Voltar Menu\n 8-encerrar programa \nInsira:'))
             if lecod == 1:
                 print("Insira:")
             elif lecod == 2:
@@ -19,7 +18,9 @@ while True:
             elif lecod == 3:
                 print("Insira:")
             elif lecod == 4:
-                print("Insira:")
+                codificado = input("Insira:").strip
+                ord('a')
+                input('pres');
             elif lecod == 5:
                 print("Insira:")
             elif lecod == 6:
